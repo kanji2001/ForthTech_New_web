@@ -1,0 +1,29 @@
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Hide horizontal scrollbar */
+body {
+  overflow-x: hidden !important; 
+  width: min-content;
+}
+
+/* Custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black 
+} */
