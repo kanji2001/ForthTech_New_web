@@ -1,0 +1,42 @@
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 40px;
+    cursor: pointer;
+}
+
+.burger-bar {
+    width: 2rem;
+    height: 0.1rem; 
+    background-color: white;
+    border-radius: 0.1rem;
+    transition: transform 0.6s linear, background-color 1s linear; 
+}
+
+.burger-bar.clicked:nth-child(1) {
+    transform: translateY(0.9rem) rotate(45deg)  translate(-0.13rem, 0rem); 
+}
+
+.burger-bar.clicked:nth-child(2) {
+    opacity: 0; 
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: translateY(-0.9rem) rotate(-45deg) translate(-0.13rem, 0rem); 
+}
+
+.hidden1 {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
