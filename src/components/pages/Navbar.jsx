@@ -63,6 +63,9 @@ const Navbar = () => {
                       <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
                         <NavLink className="nav-link text-gray-700" to="/Product">Product</NavLink>
                       </motion.li>
+                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
+                        <NavLink className="nav-link text-gray-700" to="/Blog">Blog</NavLink>
+                      </motion.li>
                     </AnimatePresence>
                   </ul>
                 </div>
