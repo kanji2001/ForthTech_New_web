@@ -103,10 +103,10 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
 
   return (
     <>
-    <div className='bg-[#d6eadf]'>  
+    <div className='bg-[#d6eadf] mt-9 md:mt-0'>  
     <section>
       <div className='flex justify-center'>
-        <div className='grid grid-cols-1 h-full   sm:grid-cols-2 '>
+        <div className='grid grid-cols-1 h-full sm:grid-cols-2 '>
           <div className='h-full w-auto text-white p-4 sm:py-10 sm:px-[100px] space-y-4 gap-x-10 px-14 bg-[#314026] flex justify-center items-center'>
                       <div className="App space-y-6">
                               <div className='text-center'>

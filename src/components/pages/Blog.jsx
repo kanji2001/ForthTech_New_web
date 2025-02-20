@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Blog() {
   return (
     <>
-      <section className=''>
+      <section className='mt-4 md:mt-0'>
         <div className="flex justify-center overflow-x-auto  items-center flex-col">
           {/* Title */}
           <div>

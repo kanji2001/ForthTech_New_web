@@ -1,7 +1,85 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
-import './Navbar.css';
+// import React, { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
+// import { NavLink } from "react-router-dom";
+// import "./Navbar.css"; 
+
+// const Navbar = () => {
+//   const [shrink, setShrink] = useState(false);
+
+//   useEffect(() => {
+//     let lastScrollY = 0;
+
+//     const handleScroll = () => {
+//       const currentScrollY = window.scrollY;
+//       setShrink(currentScrollY > lastScrollY);
+//       lastScrollY = currentScrollY;
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <motion.div className="mt-0">
+//       <motion.nav
+//         className={`fixed top-1 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 navbar-width 
+//     ${shrink ? "w-2/6 md:w-2/4  bg-black shadow-lg" : "w-1/2 md:w-4/6 bg-black"}
+//     rounded-xl p-2 flex items-center justify-between w-full`}
+//       >
+
+//         <div className="flex items-center">
+//           <img
+//             className="w-10 h-10 md:w-8 md:h-8"
+//             src="./images/Logo/forthtechlogo.png"
+//             alt="Logo"
+//           />
+//         </div>
+
+//         <div className="flex-1 flex justify-center">
+//           <motion.ul
+//             className="flex space-x-6 md:space-x-3 text-white md:text-[12px] ml-6 lg:ml-10 lg:text-[14px] items-center"
+//             initial={{ opacity: 1, width: "auto" }}
+//             animate={{ opacity: shrink ? 0 : 1, width: shrink ? 0 : "auto", }}
+//             transition={{ duration: 0.6, ease: "linear" }}
+//             style={{ overflow: "hidden" }}
+//           >
+//             <li><NavLink className="lg:mx-3" to="/">Home</NavLink></li>
+//             <li><NavLink className="lg:mx-3" to="/About">About</NavLink></li>
+//             <li><NavLink className="lg:mx-3" to="/Service">Services</NavLink></li>
+//             <li><NavLink className="lg:mx-3" to="/Product">Product</NavLink></li>
+//             <li><NavLink className="lg:mx-3" to="/Blog">Blog</NavLink></li>
+//           </motion.ul>
+//         </div>
+
+//         <div className="flex items-center">
+//           <motion.button
+//             className="px-4 py-1 md:px-2 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-yellow-500 text-white rounded"
+//             initial={{ opacity: 0, display: "none" }}
+//             animate={{ opacity: shrink ? 1 : 0, display: shrink ? "block" : "none" }}
+//             transition={{ opacity: { duration: 0.6, ease: "linear" } }}
+//           >
+//             Book a Call
+//           </motion.button>
+
+//           <NavLink
+//             to="/Contact"
+//             className="ml-2 px-4 py-2 md:px-3 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-blue-500 text-white rounded"
+//           >
+//             Contact
+//           </NavLink>
+//         </div>
+//       </motion.nav>
+
+//     </motion.div>
+//   );
+// };
+
+// export default Navbar;
+
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [shrink, setShrink] = useState(false);
@@ -11,74 +89,65 @@ const Navbar = () => {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setShrink(true);
-      } else if (currentScrollY < lastScrollY) {
-        setShrink(false);
-      }
-
+      setShrink(currentScrollY > lastScrollY );
       lastScrollY = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      <motion.div className="container mt-2">
-        <motion.nav
-          className={`navbar fixed-top transition-all duration-300 ${shrink ? 'shrink' : ''}`}
-          style={{ paddingTop: '4px', paddingBottom: '0px' }}
-        >
-          <div className="container flex justify-between items-center">
-            <img
-              className="navbar-brand w-8"
-              src="./images/Logo/forthtechlogo.png"
-              alt="Logo"
-            />
+    <motion.div className="mt-0">
+      <motion.nav
+        className={`fixed top-1 left-1/2 transform -translate-x-1/2 z-50 transition-w duration-600 navbar-width 
+        bg-black shadow-lg rounded-xl p-2 flex items-center justify-between mt-2`}
+        initial={{ width: "50%" }}
+        animate={{ width: shrink ? "30%" : "50%" }}
+        transition={{ duration: 0.1, ease: "linear" }}
+      >
+        <div className="flex items-center ml-3.5">
+          <img  
+            className="w-10 h-10 md:w-8 md:h-8"
+            src="./images/Logo/forthtechlogo.png"
+            alt="Logo"
+          />
+        </div>
 
-            {shrink ? (
-              <div className="flex items-center">
-                <button className="btn btn-warning rounded book-call-btn bg-yellow-500 text-white">Book a Call</button>
-                <NavLink to="/Contact" className="btn btn-primary rounded ms-2 bg-blue-500 text-white">
-                  Contact
-                </NavLink>
-              </div>
-            ) : (
-              <>
-                <div>
-                  <ul className="navbar-nav flex space-x-4 mb-2 mb-lg-0">
-                    <AnimatePresence>
-                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
-                        <NavLink  className="nav-link text-gray-700" to="/">Home</NavLink>
-                      </motion.li>
-                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
-                        <NavLink className="nav-link text-gray-700" to="/About">About</NavLink>
-                      </motion.li>
-                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
-                        <NavLink className="nav-link text-gray-700" to="/Service">Services</NavLink>
-                      </motion.li>
-                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
-                        <NavLink className="nav-link text-gray-700" to="/Product">Product</NavLink>
-                      </motion.li>
-                      <motion.li className={`nav-item ${shrink ? 'shrink' : ''}`} initial="hidden" animate="visible" exit="hidden">
-                        <NavLink className="nav-link text-gray-700" to="/Blog">Blog</NavLink>
-                      </motion.li>
-                    </AnimatePresence>
-                  </ul>
-                </div>
+        <div className="flex-1 flex justify-center overflow-hidden">
+          <motion.ul
+            className="flex space-x-6 md:space-x-3 text-white md:text-[12px] ml-6 lg:ml-10 lg:text-[14px] items-center"
+            initial={{ opacity: 1, display: "flex" }}
+            animate={{ opacity: shrink ? 0 : 1, display: shrink ? "none" : "flex" }}
+            transition={{ duration: 0.1, ease: "linear" }}
+          >
+            <li><NavLink className="lg:mx-2" to="/">Home</NavLink></li>
+            <li><NavLink className="lg:mx-2" to="/About">About</NavLink></li>
+            <li><NavLink className="lg:mx-2" to="/Service">Services</NavLink></li>
+            <li><NavLink className="lg:mx-2" to="/Product">Product</NavLink></li>
+            <li><NavLink className="lg:mx-2" to="/Blog">Blog</NavLink></li>
+          </motion.ul>
+        </div>
 
-                <NavLink to="/contact" className="btn btn-primary rounded bg-blue-500 text-white">
-                  Contact
-                </NavLink>
-              </>
-            )}
-          </div>
-        </motion.nav>
-      </motion.div>
-    </>
+        <div className="flex items-center">
+          <motion.button
+            className="px-4 py-1 md:px-2 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-[#fe4a23] text-white rounded"
+            initial={{ opacity: 0, display: "none" }}
+            animate={{ opacity: shrink ? 1 : 0, display: shrink ? "block" : "none" }}
+            transition={{ duration: 0.1, ease: "linear" }}
+          >
+            Book a Call
+          </motion.button>
+
+          <NavLink
+            to="/Contact"
+            className="ml-2 px-4 py-2 md:px-3 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-blue-500 text-white rounded"
+          >
+            Contact
+          </NavLink>
+        </div>
+      </motion.nav>
+    </motion.div>
   );
 };
 
