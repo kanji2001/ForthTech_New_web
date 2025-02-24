@@ -5,7 +5,7 @@ function Service() {
     const [expand,setExpand] = useState(false);
   return (
     <>
-        <div className='w-full overflow-x-hidden'>
+        <div className='w-full overflow-x-hidden bg-background-gray'>
             <div className='sm:m-10 md:m-20 m-4'>
                 <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3   '>
                     <div className=''>
@@ -184,7 +184,7 @@ function Service() {
                 </div>
 
                 <div className=' flex justify-center m-10'>
-                    <button onClick={()=>{setExpand(!expand)}} className='bg-black px-4 py-2 rounded-lg hover:bg-gray-600 text-white'>
+                    <button onClick={()=>{setExpand(!expand)}} className='bg-button-red px-4 py-2 rounded-lg hover:bg-hover-blue text-white transition-colors duration-800'>
                         {expand?'Show Less' : 'Show More'}
                     </button>
                 </div>

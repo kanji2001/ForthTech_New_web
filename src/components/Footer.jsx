@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="bg-black p-4 sm:p-10">
+    <div className="bg-background-black p-4 sm:p-10">
       <section className="overflow-x-hidden text-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-gray-950 sm:border-gray-400 sm:border-2 rounded-2xl w-full pt-8 sm:pt-[80px] sm:pl-12 gap-5 sm:gap-x-[150px]">
           <div className="w-full sm:w-[90%]">
@@ -13,10 +13,10 @@ function Footer() {
               Our creative solutions have helped clients raise $100+ mln and expand their reach.
             </p>
             <div className="mt-[60px] grid grid-cols-1 md:grid-cols-2 gap-4">
-              <button className="bg-white text-black px-4 sm:px-6 py-4 sm:py-8 rounded-2xl text-lg sm:text-2xl hover:bg-[#fe4a23] hover:text-white hover:text-3xl">
+              <button className="bg-button-gray text-text-black px-4 sm:px-6 py-4 sm:py-8 rounded-2xl text-lg sm:text-2xl hover:bg-hover-blue hover:text-white hover:text-3xl transition-colors duration-800">
                 Write us
               </button>
-              <button className="bg-white text-black px-4 sm:px-6 py-4 sm:py-8 rounded-2xl text-lg sm:text-2xl hover:bg-[#fe4a23] hover:text-white hover:text-3xl">
+              <button className="bg-button-red text-text-white px-4 sm:px-6 py-4 sm:py-8 rounded-2xl text-lg sm:text-2xl hover:bg-hover-blue hover:text-white hover:text-3xl transition-colors duration-800">
                 Book a Call
               </button>
             </div>
@@ -64,10 +64,10 @@ function Footer() {
 
             {/* Contact & Social Links */}
             <div className="p-4 space-y-4">
-              <div className="text-xl sm:text-4xl font-semibold text-center">hello@outcrowd.io</div>
+              <div className="text-xl sm:text-4xl font-semibold text-center">info@forthtech.in</div>
               <div className="flex justify-center sm:justify-end space-x-2">
                 {["globe", "globe", "instagram", "x", "linkedin"].map((icon, index) => (
-                  <button key={index} className="bg-gray-800 p-3 sm:p-4 rounded-xl">
+                  <button key={index} className="bg-gray-700 hover:bg-hover-red p-3 sm:p-4 rounded-xl text-text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -118,8 +118,10 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-8 grid sm:grid-cols-2 grid-cols-1 text-lg sm:text-xl text-gray-300 border-t border-gray-500 py-4">
-        <div className="text-center sm:text-left">Copyright © 2024 Outcrowd Inc. All rights reserved.</div>
-        <div className="text-center sm:text-right mt-2 sm:mt-0">LEWES - INDIA</div>
+        <div className="text-center sm:text-left"><span className='text-text-red'>Forth</span><span>Tech</span> © 2024 <span className='text-text-red'>Forth</span><span>Tech</span> Inc. All rights reserved.</div>
+        <div className='flex justify-center mt-2 sm:mt-0 sm:justify-end '>
+          <img src="./forthtechlogo.png" alt="forthtech logo" className='w-[40px] ' />
+        </div>
       </div>
     </div>
   );

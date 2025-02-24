@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 function Blog() {
   return (
     <>
-      <section className='mt-4 md:mt-0'>
+      <section className='mt-4 md:mt-7 bg-background-gray'>
         <div className="flex justify-center overflow-x-auto  items-center flex-col">
           {/* Title */}
           <div>
-            <h1 className="sm:text-8xl text-5xl mt-10"><span className=''>Forth</span><span className='text-red-500'>Tech</span> Blog</h1>
+            <h1 className="sm:text-8xl text-5xl mt-10"><span className='text-text-red'>Forth</span><span className='text-text-black'>Tech</span> Blog</h1>
           </div>
 
           <div className=''>

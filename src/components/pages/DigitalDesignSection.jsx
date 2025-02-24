@@ -18,7 +18,7 @@ export default function DigitalDesignSection() {
     const pOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 1], [0, 0, 0.2, 0.8, 1]);
 
     return (
-        <section ref={ref} className="min-h-screen flex flex-col items-center justify-center text-center bg-black text-white -mt-1 p-8">
+        <section ref={ref} className="min-h-screen flex flex-col items-center justify-center text-center bg-background-black text-white -mt-1 p-8">
             <motion.h2
                 className="text-[12vw] md:text-[10vw] font-medium"
                 style={{ opacity: h2Opacity }}
@@ -101,7 +101,7 @@ export default function DigitalDesignSection() {
                         </ul>
                     </div>
                     <div className="flex justify-center sm:justify-start col-span-2 ">
-                        <button className="bg-red-500 hover:bg-red-600 text-white h-[55px] sm:h-[10vh] w-full sm:w-[110px] md:w-[120px] lg:w-[175px] rounded-lg font-semibold">
+                        <button className="bg-button-red hover:bg-hover-blue text-white h-[55px] sm:h-[10vh] w-full sm:w-[110px] md:w-[120px] lg:w-[175px] rounded-lg font-semibold">
                             View Details
                         </button>
                     </div>

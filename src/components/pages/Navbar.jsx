@@ -103,15 +103,11 @@ const Navbar = () => {
         className={`fixed top-1 left-1/2 transform -translate-x-1/2 z-50 transition-w duration-600 navbar-width 
         bg-black shadow-lg rounded-xl p-2 flex items-center justify-between mt-2`}
         initial={{ width: "50%" }}
-        animate={{ width: shrink ? "30%" : "50%" }}
+        animate={{ width: shrink ? "42%" : "55%" }}
         transition={{ duration: 0.1, ease: "linear" }}
       >
         <div className="flex items-center ml-3.5">
-          <img  
-            className="w-10 h-10 md:w-8 md:h-8"
-            src="./images/Logo/forthtechlogo.png"
-            alt="Logo"
-          />
+         <h1><span className="text-text-red text-2xl font-bold">Forth</span><span className="text-text-white text-2xl font-bold">Tech</span></h1>
         </div>
 
         <div className="flex-1 flex justify-center overflow-hidden">
@@ -124,14 +120,14 @@ const Navbar = () => {
             <li><NavLink className="lg:mx-2" to="/">Home</NavLink></li>
             <li><NavLink className="lg:mx-2" to="/About">About</NavLink></li>
             <li><NavLink className="lg:mx-2" to="/Service">Services</NavLink></li>
-            <li><NavLink className="lg:mx-2" to="/Product">Product</NavLink></li>
+            {/* <li><NavLink className="lg:mx-2" to="/Product">Product</NavLink></li>  */}
             <li><NavLink className="lg:mx-2" to="/Blog">Blog</NavLink></li>
           </motion.ul>
         </div>
 
         <div className="flex items-center">
           <motion.button
-            className="px-4 py-1 md:px-2 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-[#fe4a23] text-white rounded"
+            className="px-4 py-1 md:px-2 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-button-gray hover:bg-hover-blue hover:text-white text-dark rounded transition-colors duration-800"
             initial={{ opacity: 0, display: "none" }}
             animate={{ opacity: shrink ? 1 : 0, display: shrink ? "block" : "none" }}
             transition={{ duration: 0.1, ease: "linear" }}
@@ -141,7 +137,7 @@ const Navbar = () => {
 
           <NavLink
             to="/Contact"
-            className="ml-2 px-4 py-2 md:px-3 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-blue-500 text-white rounded"
+            className="ml-2 px-4 py-2 md:px-3 md:py-1 md:text-sm lg:px-4 lg:py-2 bg-button-red hover:bg-hover-blue text-white rounded transition-colors duration-800"
           >
             Contact
           </NavLink>

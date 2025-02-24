@@ -105,7 +105,7 @@ const Rotation = () => {
   return (
     <motion.div
       ref={containerRef}
-      className="w-screen h-auto flex flex-col items-center justify-center bg-black overflow-hidden no-scrollbar px-0"
+      className="w-screen h-auto flex flex-col items-center justify-center bg-background-black overflow-hidden no-scrollbar px-0"
     >
       <motion.div className="grid grid-cols-1 md:grid-cols-12 w-full px-0">
         {/* First div */}
@@ -120,7 +120,7 @@ const Rotation = () => {
             More than <span className="text-green-400">40%</span> of our clients on this stage get initial investment for MVPs.
           </motion.p>
         </motion.div>
-        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-[#171717] shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-1 md:order-2">
+        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-background-light-black shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-1 md:order-2">
           <motion.div
             ref={div1Ref}
             className="w-full md:w-[94%] lg:w-[92%] h-[250px] md:h-[70%] lg:h-[75%] bg-gradient-to-r from-gray-900 via-gray-800 to-black rounded-2xl shadow-lg flex items-center justify-center text-white text-lg lg:text-3xl md:text-xl font-semibold md:absolute md:-right-6 lg:-right-12 "
@@ -142,7 +142,7 @@ const Rotation = () => {
             More than <span className="text-green-400">40%</span> of our clients on this stage get initial investment for MVPs.
           </motion.p>
         </motion.div>
-        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-[#171717] shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-2 md:order-4">
+        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-background-light-black shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-2 md:order-4">
           <motion.div
             ref={div2Ref}
             className="w-full md:w-[94%] lg:w-[92%] h-[250px] md:h-[70%] lg:h-[75%] bg-gradient-to-r from-gray-900 via-gray-800 to-black rounded-2xl shadow-lg flex items-center justify-center text-white text-lg lg:text-3xl md:text-xl font-semibold md:absolute md:-right-6 lg:-right-12 "
@@ -164,7 +164,7 @@ const Rotation = () => {
             More than <span className="text-green-400">40%</span> of our clients on this stage get initial investment for MVPs.
           </motion.p>
         </motion.div>
-        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-[#171717] shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-4 md:order-6">
+        <div className="md:col-span-6 h-auto lg:h-[70vh] md:h-[60vh] bg-background-light-black shadow-2xl relative flex items-center justify-center md:justify-end py-6 md:py-0 px-4 md:px-0 order-4 md:order-6">
           <motion.div
             ref={div3Ref}
             className="w-full md:w-[94%] lg:w-[92%] h-[250px] md:h-[70%] lg:h-[75%] bg-gradient-to-r from-gray-900 via-gray-800 to-black rounded-2xl shadow-lg flex items-center justify-center text-white lg:text-3xl md:text-xl font-semibold md:absolute md:-right-6 lg:-right-12 "

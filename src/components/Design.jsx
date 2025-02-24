@@ -34,7 +34,7 @@ function Design() {
                     position: 'sticky',
                     top: 0,
                     transformOrigin: '0%',
-                    background: 'green',
+                    background: '#ff2424',
                     zIndex: 1000
                 }}
             />

@@ -5,7 +5,7 @@ function All() {
   const [more,setMore] = useState(false)
   const [view,setView] = useState(false)
   return (
-    <div className=' flex justify-center'>
+    <div className=' flex justify-center bg-background-gray'>
       <div  className='md:m-10 sm:m-6 m-4  sm:mx-[70px] md:mx-[130px]'>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
           {/* box11 */}
@@ -241,7 +241,7 @@ function All() {
             }
           </div>          
           <div className='flex m-[100px] justify-center'>
-            <button onClick={()=>{setMore(!more)}} className='border-2 bg-black text-white sm:text-xl px-4 py-2 rounded-xl '>
+            <button onClick={()=>{setMore(!more)}} className='border-2 bg-button-red hover:bg-hover-blue text-white sm:text-xl px-4 py-2 rounded-xl transition-colors duration-800 '>
               {more?'view Less' : 'view More'}
             </button>
           </div>

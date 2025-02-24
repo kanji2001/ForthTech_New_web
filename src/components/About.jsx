@@ -13,11 +13,11 @@ function About() {
         <div className='flex justify-start'>
           <div className='grid grid-cols-2 gap-x-8 gap-y-6 py-10 text-center'>
             <div>
-              <h1 className='text-4xl sm:text-5xl lg:text-6xl text-green-500 font-bold'>1000+</h1>
-              <p className='text-lg sm:text-xl'>Campaigns Launched</p>
+              <h1 className='text-4xl sm:text-5xl lg:text-6xl text-text-red font-bold'>1000+</h1>
+              <p className='text-lg sm:text-xl '>Campaigns Launched</p>
             </div>
             <div>
-              <h1 className='text-4xl sm:text-5xl lg:text-6xl text-green-500 font-bold'>250M+</h1>
+              <h1 className='text-4xl sm:text-5xl lg:text-6xl text-text-red font-bold'>250M+</h1>
               <p className='text-lg sm:text-xl'>Campaign Reach</p>
             </div>
           </div>

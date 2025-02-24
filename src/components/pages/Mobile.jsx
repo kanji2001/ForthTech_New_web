@@ -38,7 +38,7 @@ const Mobile = () => {
     return (
         <div className=" container fixed top-0 left-0 w-full z-50">
             <motion.div
-                className={`bg-black transition-all duration-200 ${isMenuOpen ? "h-screen overflow-hidden" : "h-auto"}`}
+                className={`bg-black transition-all duration-200 ${isMenuOpen ? "h-screen overflow-hidden" : "h-100vh"}`}
             >
                 <div className="flex justify-between items-center p-4">
                     <div className="logo">
@@ -72,9 +72,9 @@ const Mobile = () => {
                                 <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
                                     <NavLink to="/Service" className="nav-link text-white" onClick={closeMenu}>Services</NavLink>
                                 </motion.li>
-                                <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
+                                {/* <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
                                     <NavLink to="/Product" className="nav-link text-white" onClick={closeMenu}>Product</NavLink>
-                                </motion.li>
+                                </motion.li> */}
                                 <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
                                     <NavLink to="/Blog" className="nav-link text-white" onClick={closeMenu}>Blog</NavLink>
                                 </motion.li>

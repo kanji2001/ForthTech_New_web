@@ -15,19 +15,19 @@ function Home() {
   return (
     <>
       {/* Home Section */}
-      <section id="Home" className="h-[800px] w-[100vw] bg-[#526a40]  relative flex flex-col justify-between pt-[100px]">
+      <section id="Home" className="h-[800px] w-[100vw] bg-background-gray relative flex flex-col justify-between pt-[100px]">
         <div className='relative h-full w-full'>
           <div className="flex flex-col md:px-12 lg:px-20 lg:flex-row justify-around items-center space-y-8 px-4 lg:space-y-0 lg:space-x-12 text-white">
             
             <div className=" lg:text-left flex justify-center flex-col space-y-6">
               <h1 className="text-4xl sm:text-5xl flex text-center
-                lg:text-6xl font-semibold self-center">This is our home page</h1>
-              <p className="text-lg flex text-center text-[#fefee3] max-w-lg mx-auto lg:mx-0">
+                lg:text-6xl font-semibold self-center text-text-red">This is our home page</h1>
+              <p className="text-lg flex text-center text-text-black max-w-lg mx-auto lg:mx-0">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eveniet accusantium inventore adipisci
                 voluptatem, doloremque soluta hic cum reiciendis sit.
               </p>
               <div className='flex justify-center'>
-              <button className="px-6 py-2 bg-[#fefee3] text-black  font-semibold rounded-lg shadow-md hover:bg-[#314026] hover:text-white transition duration-300">
+              <button className="px-6 py-2 bg-button-red text-text-white  font-semibold rounded-lg shadow-md hover:bg-hover-blue hover:text-white transition-colors duration-800">
                 Learn More
               </button>
               </div>

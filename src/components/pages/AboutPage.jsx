@@ -103,11 +103,11 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
 
   return (
     <>
-    <div className='bg-[#d6eadf] mt-9 md:mt-0'>  
+    <div className='bg-background-gray mt-9 md:mt-0'>  
     <section>
       <div className='flex justify-center'>
         <div className='grid grid-cols-1 h-full sm:grid-cols-2 '>
-          <div className='h-full w-auto text-white p-4 sm:py-10 sm:px-[100px] space-y-4 gap-x-10 px-14 bg-[#314026] flex justify-center items-center'>
+          <div className='h-full w-auto text-white p-4 sm:py-10 sm:px-[100px] space-y-4 gap-x-10 px-14 bg-background-black flex justify-center items-center'>
                       <div className="App space-y-6">
                               <div className='text-center'>
                               {text.map((el, i) => (
@@ -161,7 +161,7 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
                             </div>
              </div>
           <motion.div 
-           className='h-full  sm:px-[100px] sm:py-10 w-auto flex justify-center items-center bg-[#314026]'>
+           className='h-full  sm:px-[100px] sm:py-10 w-auto flex justify-center items-center bg-background-light-black'>
               <motion.img whileHover={{ scale: 1.2, rotateY: -10, x: -30 }} // Moves left on hover
               whileTap={{ scale: 0.8 }}
               
@@ -195,20 +195,20 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
         <div className='flex sm:flex-row sm:justify-around justify-center items-center  flex-col '>
           <div className='my-6'>
             
-          <motion.pre className="text-5xl font-bold bg-gradient-to-r from-[#37da4a] to-[#125b22] bg-clip-text text-transparent text-center">
+          <motion.pre className="text-5xl font-bold bg-text-red bg-clip-text text-transparent text-center">
           {`${displayCount}+`}
           </motion.pre>
         
             <p className='text-center text-2xl'>Customers</p>
           </div>
           <div className='my-6'>
-          <motion.pre className="text-5xl font-bold bg-gradient-to-r from-[#37da4a] to-[#125b22] bg-clip-text text-transparent text-center">
+          <motion.pre className="text-5xl font-bold bg-text-red bg-clip-text text-transparent text-center">
           {`${displayCount1}+`}
           </motion.pre>
           <p className='text-center text-2xl'>Global Employees</p>
           </div>
           <div className='my-6'>
-          <motion.pre className="text-5xl font-bold bg-gradient-to-r from-[#37da4a] to-[#125b22] bg-clip-text text-transparent text-center">
+          <motion.pre className="text-5xl font-bold bg-text-red bg-clip-text text-transparent text-center">
           {`${displayCount2}+`}
           </motion.pre>
           <p className='text-center text-2xl'>Customer countries and territories</p>
@@ -236,7 +236,7 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
                 <div  className='flex  justify-center items-center  flex-col'>
                 <h1 className='text-3xl mb-6  sm:text-5xl text-center'>Be a force for good</h1>
                 <p className='text-md  mb-6  sm:text-2xl text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium id ipsam ea mollitia neque, incidunt hic esse veritatis cum fugiat!</p>
-                <button className='bg-green-800 text-white hover:bg-green-600 hover:text-black px-3 rounded-lg py-2' onClick={()=>{}}>Our websiite</button>
+                <button className='bg-text-red text-white hover:bg-hover-blue hover:text-white px-3 rounded-lg py-2' onClick={()=>{}}>Our websiite</button>
                   </div>  
              </div>
           </div>
@@ -249,13 +249,13 @@ const text2 = "Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisic
         <div className='flex sm:flex-row sm:justify-around justify-center items-center  flex-col '>
           
           <div className='my-6'>
-          <motion.pre className="text-5xl font-bold bg-gradient-to-r from-[#37da4a] to-[#125b22] bg-clip-text text-transparent text-center">
+          <motion.pre className="text-5xl font-bold bg-text-red bg-clip-text text-transparent text-center">
             {`${displayCount3}+`}
           </motion.pre>
             <p className='text-center text-2xl'>Customers Lorem, ipsum.</p>
           </div>
           <div className='my-6'>
-          <motion.pre className="text-5xl font-bold bg-gradient-to-r from-[#37da4a] to-[#125b22] bg-clip-text text-transparent text-center">
+          <motion.pre className="text-5xl font-bold bg-text-red bg-clip-text text-transparent text-center">
           {`${displayCount4}+`}
           </motion.pre>
             <p className='text-center text-2xl'>Customers Lorem, ipsum.</p>
