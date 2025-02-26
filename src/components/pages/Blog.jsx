@@ -31,7 +31,7 @@ function Blog() {
                     : "hover:text-red-500 text-lg font-semibold"
                 }
               >
-                Branding
+                Robotics
               </NavLink>
               <NavLink
                 to="Design"
@@ -41,7 +41,7 @@ function Blog() {
                     : "hover:text-red-500 text-lg font-semibold"
                 }
               >
-                Design
+              Products
               </NavLink>
               <NavLink
                 to="SuccessStory"
@@ -51,7 +51,7 @@ function Blog() {
                     : "hover:text-red-500 text-lg font-semibold"
                 }
               >
-                SuccessStory
+                Software
               </NavLink>
               <NavLink
                 to="LeaderShip"
@@ -61,7 +61,7 @@ function Blog() {
                     : "hover:text-red-500 text-lg font-semibold"
                 }
               >
-                LeaderShip
+                SuccessStory
               </NavLink>
             </div>
           </div>

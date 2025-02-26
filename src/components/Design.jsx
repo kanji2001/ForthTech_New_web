@@ -19,6 +19,7 @@ import Designing from './pages/Designing';
 import LeaderShip from './pages/LeaderShip';
 import All from './pages/All';
 import ScrollToTop from './ScrollTop';
+// import BlogDetail from './pages/blogDetail';
 
 function Design() {
     const { scrollYProgress } = useScroll();
@@ -54,6 +55,7 @@ function Design() {
                             <Route path="design" element={<Designing />} />
                             <Route path="SuccessStory" element={<SuccessStory />} />
                             <Route path="leaderShip" element={<LeaderShip />} />
+                            {/* <Route path=":id" element={<BlogDetail />} /> */}
                             </Route>
                     </Route>
                 </Routes>

@@ -107,7 +107,7 @@ const Navbar = () => {
         transition={{ duration: 0.1, ease: "linear" }}
       >
         <div className="flex items-center ml-3.5">
-         <h1><span className="text-text-red text-2xl font-bold">Forth</span><span className="text-text-white text-2xl font-bold">Tech</span></h1>
+         <NavLink to="/"><h1><span className="text-text-red text-xl lg:text-2xl font-bold">Forth</span><span className="text-text-white text-xl lg:text-2xl font-bold">Tech</span></h1></NavLink>
         </div>
 
         <div className="flex-1 flex justify-center overflow-hidden">
