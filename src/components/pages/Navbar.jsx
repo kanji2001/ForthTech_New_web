@@ -117,9 +117,10 @@ const Navbar = () => {
             animate={{ opacity: shrink ? 0 : 1, display: shrink ? "none" : "flex" }}
             transition={{ duration: 0.1, ease: "linear" }}
           >
-            <li><NavLink className="lg:mx-2" to="/">Home</NavLink></li>
+            {/* <li><NavLink className="lg:mx-2" to="/">Home</NavLink></li> */}
             <li><NavLink className="lg:mx-2" to="/About">About</NavLink></li>
             <li><NavLink className="lg:mx-2" to="/Service">Services</NavLink></li>
+            <li><NavLink className="lg:mx-2" to="/Service">Portfolio</NavLink></li>
             {/* <li><NavLink className="lg:mx-2" to="/Product">Product</NavLink></li>  */}
             <li><NavLink className="lg:mx-2" to="/Blog">Blog</NavLink></li>
           </motion.ul>

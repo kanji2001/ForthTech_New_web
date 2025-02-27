@@ -4,7 +4,8 @@ export const blogData = [
         title: "Empowering Indian Education with Affordable High-Tech Robotics",
         date: "September 24, 2024",
         description: "Empowering Indian Education with Affordable High-Tech Robotics: The Journey of ForthTech’s 6-DOF Robotic Arm Introduction Interested in developing your own robotic arm? Access our PCB design, Operating application code, and CAD files in this blog.",
-        image: "/download.jpg",
+        image: "/roboticsArm.png",
+        image_hover : "/robotics.png",
         details: `
        In today’s fast-paced technological landscape, robotics is no longer confined to research labs or industrial automation—it has become an essential part of education. At ForthTech, we believe in democratizing robotics by making it accessible and affordable for students and educators. Our latest innovation, the 6-Degree-of-Freedom (6-DOF) 3D-Printed Robotic Arm, is a testament to this vision. This project aims to provide hands-on learning experiences in robotics, automation, and programming without the high costs associated with traditional robotic arms.
       `,
