@@ -29,3 +29,17 @@ body::-webkit-scrollbar-thumb {
   background-color: black 
 } */
 
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite;
+}

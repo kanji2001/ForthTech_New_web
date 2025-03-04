@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [shrink, setShrink] = useState(false);
   const [isOverGraySection, setIsOverGraySection] = useState(false);
+  const location = useLocation(); 
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -31,9 +32,11 @@ const Navbar = () => {
       setIsOverGraySection(isOverGray);
     };
 
+    handleScroll(); 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]); 
 
   return (
     <motion.div className="mt-0">
@@ -43,7 +46,7 @@ const Navbar = () => {
         style={{
           background: "hsla(0, 0%, 100%, 0.15)",
           boxShadow: "0px 0px 16px 0px hsla(0, 100%, 57%, 0.16)",
-          backdropFilter: "blur(15px)"
+          backdropFilter: "blur(15px)",
         }}
         initial={{ width: "50%" }}
         animate={{ width: shrink ? "42%" : "55%" }}

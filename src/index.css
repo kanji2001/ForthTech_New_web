@@ -18,3 +18,17 @@
 
     --shadow-blog:rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.20) 0px 0px 0px 0px;
 }
+
+.hover-effect {
+    @apply transition-all duration-500 relative 
+    hover:text-transparent hover:bg-[url("./ClientLogo/hero.69.jpg")] 
+    hover:bg-cover hover:bg-center hover:bg-no-repeat 
+    hover:w-full hover:h-full hover:rounded-[20px];
+}
+
+.hovered {
+    background-image: url('/public/ClientLogo/hero.69.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
