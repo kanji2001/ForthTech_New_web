@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ClientSection from './pages/ClientPage';
 
 function Service() {
 
@@ -188,9 +189,8 @@ function Service() {
                         {expand?'Show Less' : 'Show More'}
                     </button>
                 </div>
-
-
             </div>
+            <ClientSection/>
         </div>
     </>
   )

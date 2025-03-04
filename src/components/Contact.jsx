@@ -13,7 +13,7 @@ function Contact() {
   };
 
   return (
-    <section id="Contact" className="bg-[#dde5b4] mt-5 sm:mt-0 flex justify-center items-center py-10">
+    <section id="Contact" className="bg-background-gray mt-5 sm:mt-0 flex justify-center items-center py-10">
       <div className="container max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           

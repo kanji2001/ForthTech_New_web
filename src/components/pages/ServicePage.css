@@ -1,0 +1,13 @@
+@media (min-width: 319px) and (max-width: 376px) {
+    .custom_responsive {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+  }
+  
+  @media (min-width: 320px) {
+    .third-grid-item {
+      width: max-content
+    }
+  }
+  
