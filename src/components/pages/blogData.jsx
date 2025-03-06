@@ -14,15 +14,16 @@ export const blogData = [
        The primary goal was to develop a cost-effective, scalable, and easy-to-use robotic arm that could be integrated into educational curriculums across India. We wanted students to not just learn robotics in theory but experience it by designing, assembling, and programming a real-world robotic arm.
 
       `,
-        videoEmbed: `<iframe 
-        class="w-full aspect-video rounded-xl" 
-        src="../RoboticsVideo.mp4" 
+        videoEmbed: `<video class="w-full aspect-video rounded-xl" autoplay loop muted playsinline>
+    <source src="../RoboticsVideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+
         title="Forth Tech Robotics video"
         frameborder="0" 
         muted
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
-      </iframe>`,
+      </video>`,
 
         questions: "End-to-End Development Process",
         QuestionHeading: "1. Conceptualization & Design",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import animationData from "../lotties/Animation - 1737712534697.json";
 import Lottie from 'react-lottie';
 
@@ -12,10 +12,17 @@ function Home() {
     }
   };
 
+    const [clicked, setClicked] = useState(false);
+  
+    const handleClick = () => {
+      setClicked(true);
+      document.getElementById("targetSection")?.scrollIntoView({ behavior: "smooth" });
+    };
+
   return (
     <>
       {/* Home Section */}
-      <section id="Home" className="h-[800px] w-[100vw] bg-background-gray relative flex flex-col justify-between pt-[100px]">
+      {/* <section id="Home" className="h-[800px] w-[100vw] bg-background-gray relative flex flex-col justify-between pt-[100px]">
         <div className='relative h-full w-full'>
           <div className="flex flex-col md:px-12 lg:px-20 lg:flex-row justify-around items-center space-y-8 px-4 lg:space-y-0 lg:space-x-12 text-white">
             
@@ -33,7 +40,6 @@ function Home() {
               </div>
             </div>
 
-            {/* Animation */}
             <div className="">
               <Lottie options={defaultOptions} height={300} width={300} />
             </div>
@@ -46,8 +52,43 @@ function Home() {
             ></path>
           </svg>
         </div>
-      </section>
+      </section> */}
 
+      <div className="w-full flex flex-col items-center justify-start mt-20 mb-10">
+              <div className="text-center md:text-start space-y-2">
+                <h6 className="font-bold text-2xl tracking-wider mt-3">
+                  <span className="text-[#ff2424]">Forth</span><span>Tech</span>
+                </h6>
+
+                <span className="text-3xl sm:text-5xl font-semibold tracking-wider">
+                  TRANSFORMING IDEAS
+                </span>
+                <div className="text-center md:text-start space-y-2 tracking-wider">
+                  <span className="text-3xl sm:text-5xl font-semibold">INTO IMPACTFUL</span>
+                </div>
+                <div className="text-center md:text-start space-y-2 tracking-wider">
+                  <span className="text-3xl sm:text-5xl font-semibold">SOLUTIONS</span>
+                </div>
+                <div className="text-center md:text-start space-y-2 tracking-wider">
+                  <span className="text-3xl sm:text-5xl font-semibold">DRIVEN BY INNOVATION</span>
+                </div>
+                <div className="text-center md:text-start space-y-2 tracking-wider">
+                  <span className="text-3xl sm:text-5xl font-semibold">POWERED BY EXPERTISE</span>
+                </div>
+                <div className="text-center md:text-start space-y-2 tracking-wider mt-7">
+                  <div className="flex justify-center md:justify-start">
+                    <div
+                      className={`flex flex-col items-center cursor-pointer transition-transform duration-300 ${clicked ? "translate-y-4" : "hover:translate-y-5"
+                        }`}
+                      onClick={handleClick}
+                    >
+                      <div className="w-[1.5px] h-20 bg-black"></div>
+                      <div className="w-3 h-3 -mt-3 border-l border-b border-black rotate-[-45deg]"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
     </>

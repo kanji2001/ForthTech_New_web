@@ -42,7 +42,7 @@ const Mobile = () => {
             >
                 <div className="flex justify-between items-center p-4">
                     <div className="logo">
-                        <img src="https://via.placeholder.com/100x50" alt="Logo" />
+                        <img src="./brandinglogo.png"alt="forth tech logo" style={{ height: "32px" }} />
                     </div>
                     <button className="btn" type="button" onClick={updateMenu}>
                         <div className="burger-menu">

@@ -5,7 +5,7 @@ const BlogCard = ({ blog, onClick }) => {
 
   return (
     <div
-      className="cursor-pointer transition p-4 bg-white rounded-3xl shadow-md hover:shadow-2xl group relative overflow-hidden"
+      className="cursor-pointer transition p-4 bg-background-gray rounded-3xl shadow-md hover:shadow-2xl group relative overflow-hidden"
       onClick={() => onClick(blog)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

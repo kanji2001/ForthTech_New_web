@@ -8,7 +8,7 @@ const BlogPage = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style={{ textAlign: "justify" }}>
       {selectedBlog ? (
-        <div className="bg-white shadow-blog rounded-3xl p-6">
+        <div className="bg-background-gray shadow-blog rounded-3xl p-6">
           <div className="flex justify-between">
             <button
               onClick={() => setSelectedBlog(null)}
