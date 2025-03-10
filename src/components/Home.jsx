@@ -54,8 +54,8 @@ function Home() {
         </div>
       </section> */}
 
-      <div className="w-full flex flex-col items-center justify-start mt-20 mb-10">
-              <div className="text-center md:text-start space-y-2">
+      <div className= " bg-background-gray w-full flex flex-col items-center justify-start  mb-10">
+              <div className="text-center md:text-start space-y-2 mt-20">
                 <h6 className="font-bold text-2xl tracking-wider mt-3">
                   <span className="text-[#ff2424]">Forth</span><span>Tech</span>
                 </h6>

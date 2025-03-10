@@ -1,6 +1,7 @@
 import { easeIn, easeInOut, motion, useSpring, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import AnimatedText from "./pages/ProductAnimatedText";
 
 export default function Cards() {
   const ref = useRef(null);
@@ -127,6 +128,8 @@ export default function Cards() {
       </motion.span>
     ))}
   </h1> */}
+  
+  <AnimatedText/>
 
   {/* Cards Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-10 md:gap-14 mt-12 max-w-6xl w-full px-4">
