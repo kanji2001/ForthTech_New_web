@@ -1,7 +1,5 @@
-import { useState } from 'react'
 import './App.css'
 import Design from './components/Design'
-
 
 function App() {
 

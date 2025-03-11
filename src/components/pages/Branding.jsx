@@ -6,7 +6,7 @@ const BlogPage = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12" style={{ textAlign: "justify" }}>
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {selectedBlog ? (
         <div className="bg-background-gray shadow-blog rounded-3xl p-6">
           <div className="flex justify-between">
@@ -20,11 +20,11 @@ const BlogPage = () => {
             <div className="mb-6 text-red-500 font-medium" >Read Time : 5 Minutes</div>
           </div>
           {/* Blog Title and Date */}
-          <div className="text-center px-4 md:px-20 ">
+          <div className="text-center px-4 md:px-20 " >
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 break-words">
               {selectedBlog.title}
             </h1>
-            <p className="text-lg text-gray-600 mt-4">{selectedBlog.description}</p>
+            <p className="text-lg text-gray-600 mt-4 text-justify">{selectedBlog.description}</p>
             <p className="text-gray-500 mt-2">{selectedBlog.date}</p>
           </div>
 
@@ -38,7 +38,7 @@ const BlogPage = () => {
           </div>
 
           {/* Blog Content */}
-          <div className="prose max-w-none text-[17px] text-gray-700 mt-6 px-4 md:px-20" >
+          <div className="prose max-w-none text-[17px] text-gray-700 mt-6 px-4 md:px-20 text-justify" >
             <div dangerouslySetInnerHTML={{ __html: selectedBlog.details }} />
 
             {/* Blockquote */}
@@ -64,7 +64,7 @@ const BlogPage = () => {
             { heading: selectedBlog.FifthQHeading, content: selectedBlog.FifthDetailedDes },
             { heading: selectedBlog.SixthQHeading, content: selectedBlog.SixthDetailedDes },
           ].map((section, index) => (
-            <div key={index} className="px-4 md:px-20  mt-6">
+            <div key={index} className="px-4 md:px-20  mt-6 text-justify">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 break-words text-wrap">
                 {section.heading}
               </h2>
@@ -75,11 +75,13 @@ const BlogPage = () => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"
+        >
           {blogData.map((blog) => (
             <BlogCard key={blog.id} blog={blog} onClick={setSelectedBlog} />
           ))}
-        </div>
+        </div>  
       )}
     </div>
   );

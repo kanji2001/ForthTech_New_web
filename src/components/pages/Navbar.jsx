@@ -5,7 +5,7 @@ import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [shrink, setShrink] = useState(false);
   const [isOverGraySection, setIsOverGraySection] = useState(false);
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -21,7 +21,7 @@ const Navbar = () => {
       const navbarRect = navbar.getBoundingClientRect();
       let isOverGray = false;
 
-      document.querySelectorAll(".bg-background-gray").forEach((section) => {
+      document.querySelectorAll(".bg-background-gray, .bg-white, .bg-black").forEach((section) => {
         const rect = section.getBoundingClientRect();
 
         if (rect.top < navbarRect.bottom && rect.bottom > navbarRect.top) {
@@ -32,11 +32,11 @@ const Navbar = () => {
       setIsOverGraySection(isOverGray);
     };
 
-    handleScroll(); 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]); 
+  }, [location.pathname]);
 
   return (
     <motion.div className="mt-0">
@@ -53,23 +53,77 @@ const Navbar = () => {
         transition={{ duration: 0.1, ease: "linear" }}
       >
         <div className="flex items-center ">
-          <NavLink to="/"><img src="./brandinglogo.png" alt="forth tech logo" style={{ height: "32px" }} /></NavLink>
+          <NavLink to="/"><img src="/brandinglogo.png" alt="forth tech logo" style={{ height: "32px" }} /></NavLink>
         </div>
 
         <div className="flex-1 flex justify-center overflow-hidden">
           <motion.ul
-            className={`flex space-x-6 md:space-x-3 ${
-              isOverGraySection ? "text-text-black" : "text-text-white"
-            } md:text-[12px] ml-6 lg:ml-10 lg:text-[14px] items-center`}
-            initial={{ opacity: 1, display: "flex" }}
-            animate={{ opacity: shrink ? 0 : 1, display: shrink ? "none" : "flex" }}
-            transition={{ duration: 0.1, ease: "linear" }}
+            className={`flex space-x-6 md:space-x-3 ${isOverGraySection ? 'text-text-black' : 'text-text-white'
+              } md:text-[12px] ml-6 lg:ml-10 lg:text-[14px] items-center`}
+            initial={{ opacity: 1, display: 'flex' }}
+            animate={{ opacity: shrink ? 0 : 1, display: shrink ? 'none' : 'flex' }}
+            transition={{ duration: 0.1, ease: 'linear' }}
           >
-            <li><NavLink className="lg:mx-2" to="/About">About</NavLink></li>
-            <li><NavLink className="lg:mx-2" to="/Service">Services</NavLink></li>
-            <li><NavLink className="lg:mx-2" to="/Service">Portfolio</NavLink></li>
-            <li><NavLink className="lg:mx-2" to="/Blog">Blog</NavLink></li>
+            <li className="lg:mx-2 group">
+              <NavLink to="/About" className="footer-link w-inline-block">
+                <div className="footer-flip-hover">
+                  <div className="footer-nav-link nav">About</div>
+                  <div className="footer-nav-link hover text-[#ff2424]">About</div>
+                </div>
+              </NavLink>
+            </li>
+            <li className="lg:mx-2 group">
+              <NavLink to="/Service" className="footer-link w-inline-block">
+                <div className="footer-flip-hover">
+                  <div className="footer-nav-link nav">Services</div>
+                  <div className="footer-nav-link hover text-[#ff2424]">Services</div>
+                </div>
+              </NavLink>
+            </li>
+            <li className="lg:mx-2 group">
+              <NavLink to="/portfolio" className="footer-link w-inline-block">
+                <div className="footer-flip-hover">
+                  <div className="footer-nav-link nav">Portfolio</div>
+                  <div className="footer-nav-link hover text-[#ff2424]">Portfolio</div>
+                </div>
+              </NavLink>
+            </li>
+            <li className="lg:mx-2 group">
+              <NavLink to="/Blog" className="footer-link w-inline-block">
+                <div className="footer-flip-hover">
+                  <div className="footer-nav-link nav">Blog</div>
+                  <div className="footer-nav-link hover text-[#ff2424]">Blog</div>
+                </div>
+              </NavLink>
+            </li>
           </motion.ul>
+
+          <style jsx>{`
+        .footer-flip-hover {
+          position: relative;
+          overflow: hidden;
+        }
+        .footer-nav-link {
+          transition: transform 0.7s ease, color 0.7s ease, opacity 0.6s ease;
+        }
+        .footer-nav-link.nav {
+          transform: translateY(0);
+        }
+        .footer-nav-link.hover {
+          transform: translateY(100%);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .footer-link:hover .footer-nav-link.nav {
+          transform: translateY(-100%);
+          opacity: 0.2;
+        }
+        .footer-link:hover .footer-nav-link.hover {
+          transform: translateY(0);
+          color: #ff2424;
+        }
+      `}</style>
         </div>
 
         <div className="flex items-center">

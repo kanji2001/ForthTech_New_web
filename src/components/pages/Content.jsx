@@ -42,6 +42,19 @@ const Rotation = () => {
   const thirdPOpacity = useTransform(thirdDivProgress, [0, 0.05, 0.1, 0.15, 0.25, 0.7, 0.85, 0.9, 1], [0, 0, 0, 0.1, 1, 1, 0.1, 0.1, 0]);
   const thirdP2Opacity = useTransform(thirdDivProgress, [0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.93, 0.96 , 1], [0, 0, 0, 0.1, 1, 0.9, 0.9, 0, 0.2, 0.05]);
 
+//   const firstH2Opacity = useTransform(firstDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const firstPOpacity = useTransform(firstDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const firstP2Opacity = useTransform(firstDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+
+// const secondH2Opacity = useTransform(secondDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const secondPOpacity = useTransform(secondDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const secondP2Opacity = useTransform(secondDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+
+// const thirdH2Opacity = useTransform(thirdDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const thirdPOpacity = useTransform(thirdDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+// const thirdP2Opacity = useTransform(thirdDivProgress, [0, 0.4, 0.5, 0.55, 1], [0, 0, 1, 0, 0]);
+
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 765);
 
   useEffect(() => {
@@ -109,7 +122,7 @@ const Rotation = () => {
     >
       <motion.div className="grid grid-cols-1 md:grid-cols-12 w-full px-0">
         {/* First div */}
-        <motion.div ref={firstDivRef} className="md:col-span-6 h-auto md:h-[60vh] lg:h-[70vh] flex flex-col justify-center items-start text-white space-y-6 px-4 py-4 md:py-0 md:px-10 order-2 md:order-1">
+        <motion.div ref={firstDivRef} className="md:col-span-6 h-auto md:h-[60vh] lg:h-[70vh] flex flex-col justify-center items-start text-white space-y-6 px-4 py-4 md:py-0 md:px-10 order-2 md:order-1 ">
         <motion.h2 className="text-3xl md:text-xl lg:text-3xl font-bold" style={{ opacity: firstH2Opacity }}>
             Pre-seed Bootstrapped
           </motion.h2>

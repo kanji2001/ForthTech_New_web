@@ -19,6 +19,8 @@ import Designing from './pages/Designing';
 import LeaderShip from './pages/LeaderShip';
 import All from './pages/All';
 import ScrollToTop from './ScrollTop';
+import PortfolioPage from './pages/PortfolioPage';
+import PortfolioDetail from './pages/PortfolioCard';
 // import BlogDetail from './pages/blogDetail';
 
 function Design() {
@@ -48,6 +50,8 @@ function Design() {
                         <Route path="service" element={<ServicePage />} />
                         <Route path="product" element={<ProductPage1 />} />
                         <Route path="contact" element={<Contact />} />
+                        <Route path="portfolio" element={<PortfolioPage />} />
+                        <Route path="portfolio/:id" element={<PortfolioDetail />} />
                         <Route path="blog/" element={<Layout1 />}>
                             <Route index element={<All />} /> 
                             <Route path="all"  element={<All  />} /> 

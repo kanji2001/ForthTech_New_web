@@ -3,23 +3,46 @@ import React, { useState } from "react";
 const BlogCard = ({ blog, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  // Function to truncate text
+  const truncateText = (text, maxWords) => {
+    const words = text.split(" ");
+    if (words.length > maxWords) {
+      return words.slice(0, maxWords).join(" ") + "...";
+    }
+    return text;
+  };
+
   return (
     <div
-      className="cursor-pointer transition p-4 bg-background-gray rounded-3xl shadow-md hover:shadow-2xl group relative overflow-hidden"
+      className="cursor-pointer transition bg-background-gray rounded-3xl shadow-md hover:shadow-2xl group relative overflow-hidden"
       onClick={() => onClick(blog)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{
+        height: "350px",
+      }}
     >
-      {/* Default Image */}
+      {/* Blog Image */}
       <img
         src={isHovered ? blog.image_hover : blog.image}
         alt="Blog"
-        className="w-full rounded-3xl transition-opacity duration-300"
+        className="w-full h-44 object-cover rounded-t-3xl transition-opacity duration-300"
       />
 
-      <p className="text-gray-600 text-sm sm:text-xl">{blog.date}</p>
-      <p className="text-xl sm:text-2xl font-semibold">{blog.title}</p>
-      <p className="text-sm sm:text-xl text-gray-600">{blog.description}</p>
+      <div className="p-4 mt-2 ">
+        {/* Blog Date */}
+        <p className="text-gray-600 text-sm ">{blog.date}</p>
+
+        {/* Blog Title */}
+        <p className="text-lg font-semibold line-clamp-2 leading-tight mt-3">
+          {truncateText(blog.title, 8)}
+        </p>
+
+        {/* Blog Description */}
+        <p className="text-sm text-gray-600 mt-3 line-clamp-2 leading-snug ">
+          {truncateText(blog.description, 18)}
+        </p>
+      </div>
     </div>
   );
 };
