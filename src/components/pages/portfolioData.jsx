@@ -2,14 +2,6 @@ import dog1 from '../../images/portfolioImages/dog1.png';
 import barkDog3 from '../../images/portfolioImages/barkDog3.jpg';
 import dog2 from '../../images/portfolioImages/dog2.png';
 import dog3 from '../../images/portfolioImages/dog3.jpg';
-import dog4 from '../../images/portfolioImages/dog4.jpg';
-import dog5 from '../../images/portfolioImages/dog5.jpg';
-import dog6 from '../../images/portfolioImages/dog6.png';
-import dog7 from '../../images/portfolioImages/dog7.jpg';
-import dog8 from '../../images/portfolioImages/dog8.jpg';
-import dog9 from '../../images/portfolioImages/dog9.png';
-import dog10 from '../../images/portfolioImages/dog10.jpg';
-import dog11 from '../../images/portfolioImages/dog11.jpg';
 import dog12 from '../../images/portfolioImages/dog12.png';
 import dog13 from '../../images/portfolioImages/dog13.jpg';
 import dog14 from '../../images/portfolioImages/dog14.jpg';
@@ -22,6 +14,8 @@ import dog20 from '../../images/portfolioImages/dog20.png';
 import dog21 from '../../images/portfolioImages/dog21.png';
 import dog22 from '../../images/portfolioImages/dog23.jpg';
 import dog23 from '../../images/portfolioImages/dog24.png';
+import currentMarket from '../../images/PortfolioImages/currentMarket.png'
+import moodBoard from '../../images/PortfolioImages/moodBoard.png'
 
 const portfolioData = [
     {
@@ -31,14 +25,6 @@ const portfolioData = [
         image2: barkDog3,
         image3: dog2,
         image4: dog3,
-        image5: dog4,
-        image6: dog5,
-        image7: dog6,
-        image8: dog7,
-        image9: dog8,
-        image10: dog9,
-        image11: dog10,
-        image12: dog11,
         image13: dog12,
         image14: dog13,
         image15: dog14,
@@ -51,6 +37,8 @@ const portfolioData = [
         image22: dog21,
         image23: dog22,
         image24: dog23,
+        image25: currentMarket,
+        image26 : moodBoard,
 
         title2: "Quadruped Robot By Forthtech",
         smallDes: "The Bark Bot project exemplifies our proficiency in key areas of technology and design",
