@@ -72,6 +72,9 @@ const Mobile = () => {
                                 <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
                                     <NavLink to="/Service" className="nav-link text-white" onClick={closeMenu}>Services</NavLink>
                                 </motion.li>
+                                <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
+                                    <NavLink to="/portfolio" className="nav-link text-white" onClick={closeMenu}>Portfolio</NavLink>
+                                </motion.li>
                                 {/* <motion.li className="nav-item mt-2" variants={itemVariants} transition={{ duration: 0.1 }}>
                                     <NavLink to="/Product" className="nav-link text-white" onClick={closeMenu}>Product</NavLink>
                                 </motion.li> */}

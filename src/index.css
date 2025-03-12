@@ -27,7 +27,7 @@
 }
 
 .hovered {
-    background-image: url('/public/ClientLogo/hero.69.jpg');
+    background-image: url('ClientLogo/hero.69.jpg');
     background-size: cover;
     background-position: center;
   }

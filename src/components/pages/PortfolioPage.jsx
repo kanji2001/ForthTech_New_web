@@ -22,11 +22,13 @@ export default function PortfolioPage() {
                     {/* Text Section */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center px-5 mt-5 md:mt-0">
                         <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
-                        <p>{project.smallDes}</p><br />
-                        <p>{project.titleDes1}</p>
+                        <p >{project.smallDes}</p><br />
+                        <p className='-mt-3 sm:mt-0'>{project.titleDes1}</p>
                         <Link 
                             to={`/portfolio/${project.id}`} 
-                            className="w-[110px] mt-5 bg-button-red px-4 py-2 rounded-lg hover:bg-hover-blue text-white transition-colors duration-800"
+                            className="w-[110px] mt-7 sm:mt-5 bg-button-red px-4 py-2 rounded-lg 
+               hover:bg-hover-blue text-white transition-transform 
+               duration-300 ease-in-out transform hover:scale-105"
                         >
                             View More
                         </Link>

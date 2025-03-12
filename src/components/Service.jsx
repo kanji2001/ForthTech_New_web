@@ -22,7 +22,7 @@ function Service() {
 
                                 {/* Text with image effect on hover */}
                                 <p className='text-md text-gray-600 sm:text-lg transition-all duration-500 relative
-        hover:text-transparent hover:bg-[url("./ClientLogo/hero.69.jpg")] hover:bg-cover hover:bg-center hover:bg-no-repeat hover:w-full hover:h-full hover:rounded-[20px]'>
+        hover:text-transparent hover:bg-[url("/ClientLogo/hero.69.jpg")] hover:bg-cover hover:bg-center hover:bg-no-repeat hover:w-full hover:h-full hover:rounded-[20px]'>
                                     The project aimed to tackle the inefficiencies and physical demands of manual material handling in construction.
                                     Traditional methods are time-consuming, physically taxing, and often unsafe, especially when transporting materials
                                     over long distances or to higher floors. Our robot was designed to automate this process, addressing multiple
