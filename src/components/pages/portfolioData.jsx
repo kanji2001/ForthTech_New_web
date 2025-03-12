@@ -1,44 +1,25 @@
-import dog1 from '../../images/portfolioImages/dog1.png';
-import barkDog3 from '../../images/portfolioImages/barkDog3.jpg';
-import dog2 from '../../images/portfolioImages/dog2.png';
-import dog3 from '../../images/portfolioImages/dog3.jpg';
-import dog12 from '../../images/portfolioImages/dog12.png';
-import dog13 from '../../images/portfolioImages/dog13.jpg';
-import dog14 from '../../images/portfolioImages/dog14.jpg';
-import dog15 from '../../images/portfolioImages/dog15.jpg';
-import dog16 from '../../images/portfolioImages/dog16.jpg';
-import dog17 from '../../images/portfolioImages/dog17.png';
-import dog18 from '../../images/portfolioImages/dog18.png';
-import dog19 from '../../images/portfolioImages/dog19.png';
-import dog20 from '../../images/portfolioImages/dog20.png';
-import dog21 from '../../images/portfolioImages/dog21.png';
-import dog22 from '../../images/portfolioImages/dog23.jpg';
-import dog23 from '../../images/portfolioImages/dog24.png';
-import currentMarket from '../../images/PortfolioImages/currentMarket.png'
-import moodBoard from '../../images/PortfolioImages/moodBoard.png'
-
 const portfolioData = [
     {
         id: 1,
         title: 'Bark Bot',
-        image1: dog1,
-        image2: barkDog3,
-        image3: dog2,
-        image4: dog3,
-        image13: dog12,
-        image14: dog13,
-        image15: dog14,
-        image16: dog15,
-        image17: dog16,
-        image18: dog17,
-        image19: dog18,
-        image20: dog19,
-        image21: dog20,
-        image22: dog21,
-        image23: dog22,
-        image24: dog23,
-        image25: currentMarket,
-        image26 : moodBoard,
+        image1: "/public/PortfolioImages/dog1.png",
+        image2: "/public/portfolioImages/barkDog3.jpg",
+        image3: "/public/portfolioImages/dog2.png",
+        image4: "/public/portfolioImages/dog3.jpg",
+        image13: "/public/portfolioImages/dog12.png",
+        image14: "/public/portfolioImages/dog13.jpg",
+        image15: "/public/portfolioImages/dog14.jpg",
+        image16: "/public/portfolioImages/dog15.jpg",
+        image17: "/public/portfolioImages/dog16.jpg",
+        image18: "/public/portfolioImages/dog17.png",
+        image19: "/public/portfolioImages/dog18.png",
+        image20: "/public/portfolioImages/dog19.png",
+        image21: "/public/portfolioImages/dog20.png",
+        image22: "/public/portfolioImages/dog21.png",
+        image23: "/public/portfolioImages/dog23.jpg",
+        image24: "/public/portfolioImages/dog24.png",
+        image25: "/public/PortfolioImages/currentMarket.png",
+        image26 : "/public/PortfolioImages/moodBoard.png",
 
         title2: "Quadruped Robot By Forthtech",
         smallDes: "The Bark Bot project exemplifies our proficiency in key areas of technology and design",

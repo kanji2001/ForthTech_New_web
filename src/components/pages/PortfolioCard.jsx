@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import portfolioData from './portfolioData';
 
+
 export default function PortfolioDetail() {
     const { id } = useParams();
     const project = portfolioData.find(p => p.id === parseInt(id));
